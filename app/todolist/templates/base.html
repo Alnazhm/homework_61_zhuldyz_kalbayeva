@@ -26,21 +26,15 @@
         <li class="nav-item active ">
         <a class="nav-link text-white" href="{% url 'add_project' %}">Add project<span class="sr-only">(current)</span></a>
       </li>
-
             <li class="nav-item active ">
-
-                   <a class="nav-link text-black"><form action="{% url 'logout' %}" method="post">
+                   <a class="nav-link"><form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
-                        <input type="submit" value="Logout">
+                        <input class= "btn btn-info" type="submit" value="Logout">
                     </form><span class="sr-only">(current)</span></a>
                 </li>
-
-
-
             {% else %}
 
-             <li class="nav-item active " style="color: white;"><a class="nav-link text-white" href="{% url 'login' %}" role="button">Sign In<span class="sr-only">(current)</span></a></li>
-
+             <li class="nav-item active "><a class="nav-link btn btn-info" style="margin-top: 7px; margin-bottom: 5px;" href="{% url 'login' %}" role="button">Sign In<span class="sr-only">(current)</span></a></li>
 
         {% endif %}
     </ul>
