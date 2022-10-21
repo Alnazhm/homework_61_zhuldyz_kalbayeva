@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Tasks(models.Model):
     summary = models.CharField(verbose_name='Summary', max_length=200)
     description = models.TextField(verbose_name='Description', null=True, blank=True,max_length=2000)

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Project(models.Model):
     name = models.CharField(
         verbose_name='Project Name',

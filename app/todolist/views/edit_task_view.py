@@ -4,6 +4,7 @@ from django.views.generic import UpdateView
 from todolist.forms import TaskForm
 from django.urls import reverse
 
+
 class TaskEditView(LoginRequiredMixin, UpdateView):
     template_name = 'task_edit.html'
     form_class = TaskForm
