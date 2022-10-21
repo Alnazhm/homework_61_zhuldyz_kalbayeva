@@ -26,15 +26,14 @@
         <li class="nav-item active ">
         <a class="nav-link text-white" href="{% url 'add_project' %}">Add project<span class="sr-only">(current)</span></a>
       </li>
-        <li class="auth">
+        <li>
                     <form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
-                        <span>Здравствуйте {{ user.username }}</span>
                         <input type="submit" value="Выйти">
                     </form>
                 </li>
             {% else %}
-        <li class="auth"><a href="{% url 'login' %}">Вход</a></li>
+        <li style="color: white;"><a href="{% url 'login' %}" role="button">Вход</a></li>
         {% endif %}
     </ul>
   </div>
